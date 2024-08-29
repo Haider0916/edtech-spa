@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EdTech SPA</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>EDTECH</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#courses">Courses</a>
+      <a href="#quiz">Quiz</a>
+      <a href="#admin">Admin</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Home Section -->
+    <section id="home">
+      <h1>Welcome to the EdTech Platform</h1>
+      <p>Your journey to learning starts here.</p>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Courses Section -->
+    <section id="courses">
+      <h1>Available Courses</h1>
+      <ul>
+        <li><a href="#courseDetails" onclick="showCourseDetails()">Course 1</a></li>
+        <li><a href="#courseDetails" onclick="showCourseDetails()">Course 2</a></li>
+      </ul>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Course Details Section -->
+    <section id="courseDetails" style="display: none;">
+      <h1>Course Title</h1>
+      <p>Course description goes here...</p>
+      <button onclick="enroll()">Enroll Now</button>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Quiz Section -->
+    <section id="quiz">
+      <h1>Quiz</h1>
+      <form id="quiz-form">
+        <div class="question">
+          <p>What is the capital of France?</p>
+          <input type="radio" name="q1" value="Paris" id="paris">
+          <label for="paris">Paris</label><br>
+          <input type="radio" name="q1" value="London" id="london">
+          <label for="london">London</label>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+      <p id="quiz-result"></p>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Admin Section -->
+    <section id="admin">
+      <h1>Admin Panel</h1>
+      <h2>Manage Courses</h2>
+      <form id="course-form">
+        <label for="course-title">Course Title:</label>
+        <input type="text" id="course-title" name="title" required><br>
+        <label for="course-description">Course Description:</label>
+        <textarea id="course-description" name="description" required></textarea><br>
+        <button type="submit">Add Course</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 EdTech Inc.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
