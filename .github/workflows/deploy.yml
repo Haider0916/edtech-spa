@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - main  # Trigger the workflow on pushes to the main branch
 
 jobs:
   deploy:
@@ -16,6 +16,5 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
-          # Publish all files in the root directory
+          github_token: ${{ secrets.CUSTOM_GITHUB_TOKEN }}  # Use your PAT here
+          publish_dir: .  # Directory with the files to publish
